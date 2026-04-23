@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Haven Bookstore - About Us</title>
+</head>
+<body>
+    <header>
+        <img src="images/Client3_LogoPalette1_EE583F.png" alt="Book Haven Bookstore Logo" width="120">
+        <span id="hamburger">&#9776;</span>
+        <h1>BOOK HAVEN</h1>
+        <p>About Us</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Sensory Events</a></li>
+            </ul>
+        </nav>
+        <a href="gallery.html#cart" aria-label="View Shopping Cart">&#128722;</a>
+    </header>
+
+    <main>
+        <!-- Hero Image and Tagline -->
+        <section id="about-hero">
+            <img src="images/Client3_Magazine2.png" alt="Cozy bookstore interior" width="400"> <!-- Placeholder -->
+            <blockquote>
+                "Where the floors creak, the tea is always hot, and the books come with a side of brie."
+            </blockquote>
+        </section>
+
+        <!-- Our Story -->
+        <section id="our-story">
+            <h2>Our Story</h2>
+            <p>Book Haven has been [town name]'s literary heartbeat for over three decades. We believe the right book finds you at the right time, and that time is always better with a warm drink and a comfortable chair.</p>
+        </section>
+
+        <!-- Hours of Operation -->
+        <section id="hours">
+            <h2>Hours of Operation</h2>
+            <table>
+                <tr><td>Monday–Friday:</td><td>9 a.m. – 8 p.m.</td></tr>
+                <tr><td>Saturday:</td><td>10 a.m. – 6 p.m.</td></tr>
+                <tr><td>Sunday:</td><td>11 a.m. – 5 p.m.</td></tr>
+            </table>
+        </section>
+
+        <!-- Feedback & Custom Orders Form -->
+        <section id="contact-form">
+            <h2>Feedback &amp; Custom Orders</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>What mood or feeling should this book evoke?</legend>
+                    <input type="radio" id="mood-cozy" name="mood" value="cozy" required>
+                    <label for="mood-cozy">Cozy</label>
+                    <input type="radio" id="mood-adventurous" name="mood" value="adventurous">
+                    <label for="mood-adventurous">Adventurous</label>
+                    <input type="radio" id="mood-hungry" name="mood" value="hungry">
+                    <label for="mood-hungry">Hungry</label>
+                    <input type="radio" id="mood-nostalgic" name="mood" value="nostalgic">
+                    <label for="mood-nostalgic">Nostalgic</label>
+                </fieldset>
+
+                <label for="message">Your Message / Order Details:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section id="newsletter">
+            <h3>Subscribe to our Newsletter</h3>
+            <form action="#" method="post">
+                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <div id="social-links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+        <nav aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Sensory Events</a></li>
+            </ul>
+        </nav>
+        <p>&copy; Book Haven Bookstore</p>
+    </footer>
+</body>
+</html>
