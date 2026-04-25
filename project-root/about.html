@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven Bookstore - About Us</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -19,25 +20,20 @@
                 <li><a href="events.html">Sensory Events</a></li>
             </ul>
         </nav>
-        <a href="gallery.html#cart" aria-label="View Shopping Cart">&#128722;</a>
+        <a href="#" id="view-cart" aria-label="View Shopping Cart">&#128722; View Cart</a>
     </header>
 
     <main>
-        <!-- Hero Image and Tagline -->
         <section id="about-hero">
-            <img src="images/Client3_Magazine2.png" alt="Cozy bookstore interior" width="400"> <!-- Placeholder -->
-            <blockquote>
-                "Where the floors creak, the tea is always hot, and the books come with a side of brie."
-            </blockquote>
+            <img src="images/Client3_Magazine2.png" alt="Cozy bookstore interior" width="300">
+            <blockquote>"Where the floors creak, the tea is always hot, and the books come with a side of brie."</blockquote>
         </section>
 
-        <!-- Our Story -->
         <section id="our-story">
             <h2>Our Story</h2>
             <p>Book Haven has been [town name]'s literary heartbeat for over three decades. We believe the right book finds you at the right time, and that time is always better with a warm drink and a comfortable chair.</p>
         </section>
 
-        <!-- Hours of Operation -->
         <section id="hours">
             <h2>Hours of Operation</h2>
             <table>
@@ -47,15 +43,14 @@
             </table>
         </section>
 
-        <!-- Feedback & Custom Orders Form -->
         <section id="contact-form">
             <h2>Feedback &amp; Custom Orders</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email-contact">Email:</label>
+                <input type="email" id="email-contact" name="email" required>
 
                 <fieldset>
                     <legend>What mood or feeling should this book evoke?</legend>
@@ -81,7 +76,7 @@
         <section id="newsletter">
             <h3>Subscribe to our Newsletter</h3>
             <form action="#" method="post">
-                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                <input type="email" id="footer-email" name="email" placeholder="Enter your email" aria-label="Email for newsletter">
                 <button type="submit">Subscribe</button>
             </form>
         </section>
@@ -100,5 +95,21 @@
         </nav>
         <p>&copy; Book Haven Bookstore</p>
     </footer>
+
+    <!-- Cart Modal (same as gallery, kept for consistency) -->
+    <div id="cart-modal-overlay" class="modal-overlay" style="display: none;">
+        <div id="cart-modal" class="modal-box">
+            <button id="close-modal" class="close-btn" aria-label="Close cart">&times;</button>
+            <h2>Your Cart</h2>
+            <div id="cart-items-container"></div>
+            <div id="cart-empty-message"><p>Your cart is empty. Browse the gallery to add items.</p></div>
+            <div class="modal-actions">
+                <button id="modal-clear-cart">Clear Cart</button>
+                <button id="modal-process-order">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

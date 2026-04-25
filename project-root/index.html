@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven Bookstore - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <img src="images/Client3_LogoPalette1_EE583F.png" alt="Book Haven Bookstore Logo" width="120">
-        <span id="hamburger">&#9776;</span> <!-- Placeholder for mobile menu -->
+        <span id="hamburger">&#9776;</span>
         <h1>BOOK HAVEN</h1>
         <p>est. 1987</p>
         <nav>
@@ -20,19 +20,16 @@
                 <li><a href="events.html">Sensory Events</a></li>
             </ul>
         </nav>
-        <a href="gallery.html#cart" aria-label="View Shopping Cart">&#128722;</a> <!-- Cart icon placeholder -->
+        <a href="#" id="view-cart" aria-label="View Shopping Cart">&#128722; View Cart</a>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section id="hero">
-            <img src="images/Client3_Book1.png" alt="Cozy bookstore interior" width="300"> <!-- placeholder for hero image; using a product image temporarily as per wireframe -->
+            <img src="images/Client3_Book1.png" alt="Cozy bookstore interior">
             <h2>Get Lost in the Stacks — New Arrivals Weekly</h2>
             <a href="gallery.html" role="button">Browse Picks</a>
         </section>
 
-        <!-- Categories Section -->
         <section id="categories">
             <h2>Categories</h2>
             <div role="list">
@@ -42,41 +39,35 @@
             </div>
         </section>
 
-        <!-- Shopping Perks Section -->
         <section id="perks">
             <h2>Shopping Perks</h2>
             <ul>
-                <li>Free Local Delivery (5-mile radius)</li>
+                <li>Free Local Delivery (5‑mile radius)</li>
                 <li>Sunday Tea Service (11am–5pm)</li>
-                <li>Member Discounts on Pre-Orders</li>
+                <li>Member Discounts on Pre‑Orders</li>
             </ul>
         </section>
 
-        <!-- Featured Item Section -->
         <section id="featured">
             <h2>Featured Item</h2>
-            <img src="images/Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles book cover" width="200">
+            <img src="images/Client3_Book3.png" alt="Sorcerer's Shadowed Chronicles">
             <h3>Sorcerer's Shadowed Chronicles</h3>
             <p>$24.99</p>
             <button>Add to Cart</button>
         </section>
 
-        <!-- Staff Pick / Client Highlight -->
         <section id="staff-pick">
             <h2>Staff Pick</h2>
-            <blockquote>
-                "Margaret recommends: Brie Mine 4Ever. Perfect for your next sensory book club night."
-            </blockquote>
+            <blockquote>"Margaret recommends: Brie Mine 4Ever. Perfect for your next sensory book club night."</blockquote>
             <a href="#">Read Full Review</a>
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <section id="newsletter">
             <h3>Subscribe to our Newsletter</h3>
             <form action="#" method="post">
-                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                <input type="email" id="footer-email" name="email" placeholder="Enter your email" aria-label="Email for newsletter">
                 <button type="submit">Subscribe</button>
             </form>
         </section>
@@ -95,5 +86,21 @@
         </nav>
         <p>&copy; Book Haven Bookstore</p>
     </footer>
+
+    <!-- Cart Modal Overlay (empty cart placeholder – gallery page has the full version) -->
+    <div id="cart-modal-overlay" class="modal-overlay" style="display: none;">
+        <div id="cart-modal" class="modal-box">
+            <button id="close-modal" class="close-btn" aria-label="Close cart">&times;</button>
+            <h2>Your Cart</h2>
+            <div id="cart-items-container"></div>
+            <div id="cart-empty-message"><p>Your cart is empty. Browse our gallery to add items.</p></div>
+            <div class="modal-actions">
+                <button id="modal-clear-cart">Clear Cart</button>
+                <button id="modal-process-order">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

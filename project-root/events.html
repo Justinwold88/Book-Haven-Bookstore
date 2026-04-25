@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Haven Bookstore - Sensory Events</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -19,36 +20,27 @@
                 <li><a href="events.html">Sensory Events</a></li>
             </ul>
         </nav>
-        <a href="gallery.html#cart" aria-label="View Shopping Cart">&#128722;</a>
+        <a href="#" id="view-cart" aria-label="View Shopping Cart">&#128722; View Cart</a>
     </header>
 
     <main>
-        <!-- Featured Event -->
         <section id="featured-event">
             <h2>Featured Event</h2>
             <article>
                 <h3>📖🧀 Blind Date with a Book &amp; Brie 🧀📖</h3>
-                <img src="images/Client3_Book1.png" alt="Wrapped book and cheese board" width="250"> <!-- temporary image -->
+                <img src="images/Client3_Book1.png" alt="Wrapped book and cheese board" width="200">
                 <p><strong>First Wednesday of Every Month</strong><br>6:30 p.m. – 8:00 p.m.</p>
-                <p>Unwrap a mystery book selected by mood, paired with artisanal cheeses from our friends at Local Creamery. A sensory delight for readers and food lovers alike.</p>
+                <p>Unwrap a mystery book selected by mood, paired with artisanal cheeses from our friends at Local Creamery.</p>
                 <a href="#" role="button">Reserve Your Spot</a>
             </article>
         </section>
 
-        <!-- Testimonials -->
         <section id="testimonials">
             <h2>What Our Guests Say</h2>
-            <blockquote>
-                "The creaky floors and cozy chairs make me feel like I'm reading in a Jane Austen novel."<br>
-                <cite>— Emily R.</cite>
-            </blockquote>
-            <blockquote>
-                "I came for the books, stayed for the brie. The sensory pairing events are unlike anything in town."<br>
-                <cite>— Marcus T.</cite>
-            </blockquote>
+            <blockquote>"The creaky floors and cozy chairs make me feel like I'm reading in a Jane Austen novel."<br><cite>— Emily R.</cite></blockquote>
+            <blockquote>"I came for the books, stayed for the brie. The sensory pairing events are unlike anything in town."<br><cite>— Marcus T.</cite></blockquote>
         </section>
 
-        <!-- Community Partners -->
         <section id="partners">
             <h2>Community Partners</h2>
             <ul>
@@ -63,7 +55,7 @@
         <section id="newsletter">
             <h3>Subscribe to our Newsletter</h3>
             <form action="#" method="post">
-                <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                <input type="email" id="footer-email" name="email" placeholder="Enter your email" aria-label="Email for newsletter">
                 <button type="submit">Subscribe</button>
             </form>
         </section>
@@ -82,5 +74,21 @@
         </nav>
         <p>&copy; Book Haven Bookstore</p>
     </footer>
+
+    <!-- Cart Modal Overlay (kept for consistency, though no gallery items here) -->
+    <div id="cart-modal-overlay" class="modal-overlay" style="display: none;">
+        <div id="cart-modal" class="modal-box">
+            <button id="close-modal" class="close-btn" aria-label="Close cart">&times;</button>
+            <h2>Your Cart</h2>
+            <div id="cart-items-container"></div>
+            <div id="cart-empty-message"><p>Your cart is empty. Browse the gallery to add items.</p></div>
+            <div class="modal-actions">
+                <button id="modal-clear-cart">Clear Cart</button>
+                <button id="modal-process-order">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
